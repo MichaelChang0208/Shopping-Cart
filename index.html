@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MICHAEL |  Js Shopping Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="cart-sidebar">
+        <div class="sidebar-title">購物車</div>
+        <div class="cartItem-container">
+    
+        </div>
+        <div id="empty">
+            <div style="padding:15px;display:block">您的購物車是空的</div>
+        </div>
+
+
+        <div id="ag" class="ag">
+            <div class="cart-total">
+                <h3 class="cart-total-title">總共 :</h3>
+                <span class="cart-total-price">NT$</span>
+            </div>
+            <div class="check-out">
+                <button class="check-out-btn">訂單結帳</button>
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="menu-sidebar">
+        <div class="cagetories">
+            <div class="cagetories-title">目錄</div>
+            <div class="cagetories-box">
+                <a href="#" class="cagetories-box-item" data-target="accessories">Accessories</a>
+                <a href="#" class="cagetories-box-item" data-target="watchs">Watchs</a>
+                <a href="#" class="cagetories-box-item" data-target="bags">Bags</a>
+                <a href="#" class="cagetories-box-item" data-target="clothing">Clothing</a>
+                <a href="#" class="cagetories-box-item" data-target="others">Others</a>
+                <a href="#" id="fb-btn" class="cagetories-box-link">Facebook</a>
+                <a href="#" id="ig-btn" class="cagetories-box-link">Instagram</a>
+            </div>
+            <div class="cagetories-title">帳戶</div>
+            <div class="cagetories-box">
+                <a href="#" class="u-btn cagetories-box-link">登入會員</a>
+            </div>
+            <div class="cagetories-title">其他</div>
+            <div class="cagetories-box">
+                <a href="#" class="cagetories-box-link message-btn">聯絡我們</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-sidebar-overlay"></div>
+
+    <div class="nav">
+        <!-- 如果用 # 代替 javascript:; 那麼頁面會跳到最上方 -->
+
+        <a class="logo" href="./index.html" >
+            <div class="logo-word">MICHAEL</div>
+        </a>
+        <a class="mobile-btn" href="javascript:;" >
+            <span class="menu"></span>
+        </a>
+        <a class="search-btn" href="javascript:;" >
+            <i class="fas fa-search"></i>
+        </a>
+        <a class="nav-btn user-btn" href="javascript:;" >
+            <i class="fas fa-user"></i>
+            <span class="nav-words">登入會員</span>
+        </a>
+        <a class="nav-btn cart-btn" href="javascript:;">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="nav-words">購物車</span>
+            <span class="cart-count"></span>
+        </a>
+        <a id="pc-message-btn" class="nav-btn comment-btn" href="javascript:;">
+            <i class="fas fa-comment"></i>
+            <span class="message-btn">聯絡我們</span>
+            <span class="cart-count"></span>
+        </a>
+        <div class="search-form">
+            <div class="pc-search-box">
+                <input class="pc-search-input"placeholder="找商品" type="text">
+                <div id="pc-search">
+                    <span class="pc-search fas fa-search"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mobile-search">
+        <div class="m-search-box">
+            <div id="m-search">
+                <span class="fas fa-search"></span>
+            </div>
+            <input class="mobile-search-input"type="text" placeholder="找商品">
+        </div>
+    </div>
+
+    <div class="pc-header">
+        <div class="header-wrapper">
+            <a href="./index.html" class="pc-logo">MICHAEL</a>
+            <div class="item-wrapper">
+                <a href="#" class="header-item" data-target="accessories">Accessories</a>
+                <a href="#" class="header-item" data-target="watchs">Watchs</a>
+                <a href="#" class="header-item" data-target="bags">Bags</a>
+                <a href="#" class="header-item" data-target="clothing">Clothing</a>
+                <a href="#" class="header-item" data-target="others">Others</a>
+            </div>
+         
+        </div>
+    </div>
+    <div class="message-box">
+        <div class="message-container">
+            <div class="message-title">聯絡我們</div>
+            <div class="message-top">
+                <form action="">
+                    <input class="email" type="email"placeholder="輸入您的電子信箱" required>
+                    <input class="text" type="text" placeholder="輸入您的訊息" required>
+                    <input type="submit" class="submit">
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="message-overlay"></div>
+    <div class="container">
+        <div class="products">
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Emerald Necklace.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Emerald Diamond Twinkle Necklace</div>
+                    <div class="product-price">NT$4,990</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Diamond bracelet.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / 5k Diamond Bracelet</div>
+                    <div class="product-price">NT$8,900</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="watchs">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Smart watch.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+
+                    <div class="product-title">MICHAEL / Smart Watch Series 5</div>
+                    <div class="product-price">NT$3,380</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card"  data-id="others">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Fashion Sunglasses.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / New Fashion Sunglasses</div>
+                    <div class="product-price">NT$1,280</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="bags">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Lattice Shoulder Bag.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Fashion Lattice Shoulder Bag</div>
+                    <div class="product-price">NT$4,600</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="bags">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Vintage bag.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Vintage Leather Shoulder Bag</div>
+                    <div class="product-price">NT$2,890</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="others">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Christmas Greeting Coffee Mug.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Christmas Greeting Coffee Mug</div>
+                    <div class="product-price">NT$490</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Petite Emerald and Diamond Ring.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Petite Emerald and Diamond Ring</div>
+                    <div class="product-price">NT$56,880</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Classic Cushion Halo Diamond Earrings.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Classic Halo Diamond Earrings</div>
+                    <div class="product-price">NT$19,580</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Heart Shaped Diamond Ring.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Heart Shaped Diamond Ring</div>
+                    <div class="product-price">NT$38,990</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/gold ring.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / 18k White Gold Diamond Ring</div>
+                    <div class="product-price">NT$85,190</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Diamond Engagement Ring.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Diamond Engagement Ring</div>
+                    <div class="product-price">NT$65,790</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="product-card" data-id="accessories">
+                <div class="product-container">
+                    <div class="product-img">
+                        <img class="product-image" src="../images/Sapphire diamond ring.jpeg" alt="">
+                        <div class="img-btn-addtocart">加入購物車</div>
+                    </div>
+                    <div class="product-title">MICHAEL / Sapphire diamond ring</div>
+                    <div class="product-price">NT$42,190</div>
+                    <div class="mobile-addtocart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>  
+
+                <div class="product-card"  data-id="accessories">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Ruby Diamond Ring.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Ruby Diamond Ring</div>
+                        <div class="product-price">NT$15,290</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card"  data-id="accessories">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/14k White Gold Sapphire necklace.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / 14k White Gold Sapphire Necklace</div>
+                        <div class="product-price">NT$83,990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card"  data-id="watchs">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Men's Three-Eye Belt Watch.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Men's Three-Eye Belt Watch</div>
+                        <div class="product-price">NT$11,990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card"  data-id="watchs">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Galaxy Simple Women's Watch.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Galaxy Simple Women's Watch</div>
+                        <div class="product-price">NT$9,990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card"  data-id="watchs">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Classic College Canvas Watch.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Classic College Canvas Watch</div>
+                        <div class="product-price">NT$3,990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card"  data-id="watchs">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Rose Gold Women's Watch.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Rose Gold Women's Watch</div>
+                        <div class="product-price">NT$5,570</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card" data-id="watchs">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Sports Three-eye Men's Watch.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Sports Three-eye Men's Watch</div>
+                        <div class="product-price">NT$4,990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card" data-id="clothing">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Two-tone Narrow Tube Jeans.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Two-tone Narrow Tube Jeans</div>
+                        <div class="product-price">NT$990</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card" data-id="clothing">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Tricolor Classic Jeans.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Tricolor Classic Jeans</div>
+                        <div class="product-price">NT$890</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="product-card" data-id="clothing">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Orange Stripe Hat.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Orange Stripe Hat</div>
+                        <div class="product-price">NT$390</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+               
+                <div class="product-card" data-id="clothing">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/Women's Braided Sun Hat.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Women's Braided Sun Hat</div>
+                        <div class="product-price">NT$790</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+                
+                <div class="product-card" data-id="others">
+                    <div class="product-container">
+                        <div class="product-img">
+                            <img class="product-image" src="../images/aviator Sunglasses.jpeg" alt="">
+                            <div class="img-btn-addtocart">加入購物車</div>
+                        </div>
+                        <div class="product-title">MICHAEL / Fashion Aviator Sunglasses</div>
+                        <div class="product-price">NT$1,390</div>
+                        <div class="mobile-addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>  
+
+                
+        </div>
+    </div>
+
+    <div class="sign-container">
+        <div class="wrapper">
+            <div class="top">
+                <a class="sign-up" href="#">註冊會員</a>
+                <a class="sign-in" href="#">會員登入</a>
+            </div>
+            <div class="bottom">
+                <p>註冊會員</p>
+                <form action="">
+                    <input type="text" placeholder="用戶名">
+                    <input type="email" placeholder="信箱" required>
+                    <input type="password" placeholder="密碼">
+                    <input class="sub"type="submit" value="加入我們">
+                </form>
+            </div>
+            <div class="login">
+                <p>會員登入</p>
+                <form action="">
+                    <input type="email" placeholder="信箱" required>
+                    <input type="password" placeholder="密碼">
+                    <input class="sub"type="submit" value="立即登入">
+                    <a href="javascript:;">忘記密碼?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-back"></div>
+
+    <div class="box-info-pop-up">
+        <div class="box-info-pop-up-container">
+            <div class="close-pop-up-btn">x</div>
+
+            <div class="box-info-top">
+                <div class="box-info-top-left">
+                    <div class="box-info-top-left-img">
+                        <img class="box-info-top-left-image" src="" alt="">
+                    </div>
+                </div>
+                <div class="box-info-top-right">
+                    <div class="box-info-top-right-title"></div>
+                    <div class="box-info-top-right-price"></div>
+                    <a href="javascript:;" class="box-info-top-right-product-link">商品資訊</a>
+                </div>
+            </div>
+
+            <div class="box-info-bottom">
+                <div>尺寸</div>
+                <select class="box-info-bottom-select-size">
+                    <option class="box-info-bottom-size" value="M">M</option>
+                    <option class="box-info-bottom-size" value="L">L</option>
+                </select>
+
+                <div>顏色</div>
+                <select class="box-info-bottom-select-color">
+                    <option class="box-info-bottom-color" value="BLACK">BLACK</option>
+                    <option class="box-info-bottom-color" value="WHITE">WHITE</option>
+                </select>
+
+                <div>數量</div>
+                <div class="box-info-bottom-input-group">
+                    <button class="box-info-bottom-no-add"><i class="fas fa-minus"></i></button><input
+                        class="box-info-bottom-input" type="text" maxlength="2" value="1"><button
+                        class="box-info-bottom-add"><i class="fas fa-plus"></i></button>
+                </div>
+
+                <div id="uni" class="box-info-bottom-addtocart">加入購物車</div>
+            </div>
+        </div>
+    </div>
+    <div class="box-info-overlay"></div>
+    <div class="mobile-search-overlay"></div>
+    <div id="footer-bottom"></div>
+    <div class="footer">
+        &copy; Michael Chang 所有圖片皆來自 Pexels
+    </div>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script src="./new.js"></script>
+
+</body>
+
+</html>
