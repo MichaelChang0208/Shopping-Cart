@@ -333,6 +333,7 @@ body{
                 margin-bottom:10px;
                 padding-left:10px;
                 font-size: 15px;
+                background-color: #fff;
             }
             .box-info-bottom-select-color{
                 width:100%;
@@ -340,16 +341,19 @@ body{
                 margin-bottom:10px;
                 padding-left:10px;
                 font-size: 15px;
+                background-color: #fff;
             }
             .box-info-bottom-input-group{
                 width:100%;
                 display: inline-block;
                 margin-bottom:20px;
+                
                 .box-info-bottom-input{
                     height:30px;
                     padding-left:10px;
                     font-size: 15px;
                     width:70%;
+                    border: 1px solid #aaa;
                 }
                 .box-info-bottom-no-add{
                     border: 1px solid #aaa;
@@ -770,7 +774,7 @@ body{
     }
     /*popup*/
     .box-info-pop-up{
-        width:90%;
+        width:92%;
         .box-info-pop-up-container{
             .box-info-top{
                 .box-info-top-right{

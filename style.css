@@ -438,6 +438,7 @@ body {
   margin-bottom: 10px;
   padding-left: 10px;
   font-size: 15px;
+  background-color: #fff;
 }
 
 .box-info-pop-up .box-info-pop-up-container .box-info-bottom .box-info-bottom-select-color {
@@ -446,6 +447,7 @@ body {
   margin-bottom: 10px;
   padding-left: 10px;
   font-size: 15px;
+  background-color: #fff;
 }
 
 .box-info-pop-up .box-info-pop-up-container .box-info-bottom .box-info-bottom-input-group {
@@ -459,6 +461,7 @@ body {
   padding-left: 10px;
   font-size: 15px;
   width: 70%;
+  border: 1px solid #aaa;
 }
 
 .box-info-pop-up .box-info-pop-up-container .box-info-bottom .box-info-bottom-input-group .box-info-bottom-no-add {
@@ -994,7 +997,7 @@ body {
   }
   /*popup*/
   .box-info-pop-up {
-    width: 90%;
+    width: 92%;
   }
   .box-info-pop-up .box-info-pop-up-container .box-info-top .box-info-top-right {
     padding-left: 0;
