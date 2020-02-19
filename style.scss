@@ -761,17 +761,17 @@ body{
     .menu-sidebar{
         height:100%;
         padding-bottom:51px;
-        .cagetories{
+        .categories{
             width:100%;
-            .cagetories-title{
+            .categories-title{
                 @include mobilemenutitle();
             }
-            .cagetories-box{
+            .categories-box{
                 list-style: none;
-                .cagetories-box-item{
+                .categories-box-item{
                     @include mobilemenuli();
                 }
-                .cagetories-box-link{
+                .categories-box-link{
                     @include mobilemenuli();
                 }
             }
@@ -1025,7 +1025,7 @@ body{
     padding-right:0;
     .products{
         .product-card{
-            width:100%;
+            
             .product-container{
                 .product-img{
                    padding:40%;

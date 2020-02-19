@@ -456,22 +456,25 @@ mobileMenuBtn.addEventListener('click', removeCartShowClicked);
 mobileMenuBtn.addEventListener('click', removeMobileSearchShow);
 mobileMenuBtn.addEventListener('click',removePopUp);
 mobileMenuBtn.addEventListener('click',removeMessageToggle);
+
 /*點搜尋按鈕 移除其他按鈕的事件 增加使用者體驗 */
 navSearchBtn.addEventListener('click',removeMobileMenu);
 navSearchBtn.addEventListener('click',removeCartShowClicked);
 navSearchBtn.addEventListener('click',removePopUp);
 navSearchBtn.addEventListener('click',removeMessageToggle);
+
 /*點購物車按鈕 移除其他按鈕的事件 增加使用者體驗 */
 cartTopBtn.addEventListener('click',removeMobileMenu);
 cartTopBtn.addEventListener('click',removeMobileSearchShow);
 cartTopBtn.addEventListener('click',removePopUp);
 cartTopBtn.addEventListener('click',removeMessageToggle);
+
 /*點會員按鈕 移除其他按鈕的事件 增加使用者體驗 */
 mobileUserBtn.addEventListener('click', removeCartShowClicked);
 mobileUserBtn.addEventListener('click', removeMobileMenu);
 mobileUserBtn.addEventListener('click', removeMobileSearchShow);
 mobileUserBtn.addEventListener('click', removePopUp);
-mobileUserBtn.addEventListener('click', removeMessageToggle);
+mobileUserBtn.addEventListener('click', removeMessageToggle);   hideSignIn
 
 /*手機版本 search toggle class */
 const pcSearchForm = document.querySelector('.search-form');
@@ -513,7 +516,7 @@ function MsFilterCard(){
     input.value = '';
 }
 /*mobilesiderbar menu */
-const sidebarbtns = document.querySelectorAll('.cagetories-box-item');
+const sidebarbtns = document.querySelectorAll('.categories-box-item');
 for(const btn of sidebarbtns ){
     btn.addEventListener('click',function(){
         // console.log(this.getAttribute("data-target"))
@@ -639,12 +642,21 @@ const userBtn = document.querySelector('.user-btn');
 const wrapper = document.querySelector('.container');
 const signWrapper = document.querySelector('.sign-container');
 const mobileUserButton = document.querySelector('.u-btn '); 
-function showSginIn(){
+
+function showSignIn(){
     wrapper.style.display='none';
     signWrapper.style.display='block';
 }
-userBtn.addEventListener('click',showSginIn)
+function hideSignIn(){
+    wrapper.style.display='block';
+    signWrapper.style.display='none';
+}
+const sideBarBtn = document.querySelectorAll('.categories-box-item');
+sideBarBtn.forEach(item=>{
+    item.addEventListener('click',hideSignIn);
+});
+userBtn.addEventListener('click',showSignIn)
 mobileUserButton.addEventListener('click',function(){
     removeMobileMenu();
-    showSginIn();
+    showSignIn();
 });
